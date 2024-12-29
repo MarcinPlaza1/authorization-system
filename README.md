@@ -1,78 +1,63 @@
 # FastAPI Project
 
-Projekt API zbudowany przy użyciu FastAPI z pełną strukturą, uwierzytelnianiem i autoryzacją.
+An API project built with FastAPI featuring a full structure, authentication, and authorization.
 
-## Wymagania
+## Requirements
 
 - Python 3.8+
 - FastAPI
 - SQLAlchemy
 - Pydantic
-- oraz inne zależności wymienione w `requirements.txt`
+- Other dependencies listed in `requirements.txt`
 
-## Instalacja
+## Installation
 
-1. Sklonuj repozytorium:
+1. Clone the repository:
 ```bash
-git clone [url-repozytorium]
-cd [nazwa-projektu]
+git clone [repository-url]
+cd [project-name]
 ```
 
-2. Utwórz i aktywuj wirtualne środowisko:
+2. Create and activate a virtual environment:
 ```bash
 python -m venv venv
 source venv/bin/activate  # Linux/macOS
-# lub
+# or
 .\venv\Scripts\activate  # Windows
 ```
 
-3. Zainstaluj zależności:
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Skopiuj `.env.example` do `.env` i dostosuj zmienne środowiskowe:
+4. Copy `.env.example` to `.env` and adjust the environment variables:
 ```bash
 cp .env.example .env
 ```
 
-## Uruchomienie
+## Running the Application
 
-Aby uruchomić serwer deweloperski:
+To start the development server:
 
 ```bash
 uvicorn main:app --reload
 ```
 
-API będzie dostępne pod adresem `http://localhost:8000`
+The API will be available at `http://localhost:8000`.
 
-## Dokumentacja API
+## API Documentation
 
 - Swagger UI: `http://localhost:8000/docs`
 - ReDoc: `http://localhost:8000/redoc`
 
-## Testy
+## Testing
 
-Aby uruchomić testy:
+To run the tests:
 
 ```bash
 pytest
 ```
 
-## Struktura Projektu
-
-```
-/project-root
-  /app
-    /models      - Modele SQLAlchemy
-    /routes      - Endpointy API
-    /services    - Logika biznesowa
-    /db          - Konfiguracja bazy danych
-  /tests         - Testy
-  /docs          - Dokumentacja
-  main.py        - Punkt wejścia aplikacji
-  requirements.txt
-  README.md
-  Dockerfile
-  .env
-``` 
+## Authors
+- Marcin Plaza - Lead Developer
