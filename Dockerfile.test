@@ -1,0 +1,30 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Instalacja zależności systemowych
+RUN apt-get update && apt-get install -y \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+# Kopiowanie plików projektu
+COPY pyproject.toml poetry.lock ./
+COPY app/ app/
+COPY tests/ tests/
+COPY alembic.ini ./
+COPY scripts/ scripts/
+
+# Instalacja Poetry
+RUN pip install poetry
+
+# Konfiguracja Poetry
+RUN poetry config virtualenvs.create false \
+    && poetry install --no-interaction --no-ansi
+
+# Instalacja Alembic
+RUN pip install alembic
+
+# Skrypt startowy dla testów
+RUN chmod +x /app/scripts/run_tests.sh
+
+CMD ["/app/scripts/run_tests.sh"] 

@@ -1,0 +1,90 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Środowiska wirtualne
+venv/
+env/
+ENV/
+.env
+.venv
+.python-version
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+*.sublime-workspace
+*.sublime-project
+
+# Testy i coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+nosetests.xml
+coverage/
+
+# Logi i dane
+logs/
+*.log
+*.sqlite3
+*.db
+
+# FastAPI specyficzne
+.env.local
+.env.*.local
+
+# Poetry
+poetry.lock
+dist/
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Prometheus & Grafana
+prometheus/
+grafana/
+alertmanager/
+
+# Redis
+*.rdb
+redis.conf
+
+# Dokumentacja
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# Pliki tymczasowe
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db 
